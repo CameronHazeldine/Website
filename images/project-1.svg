@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Illustration of a home in Rototuna">
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9dff0"/><stop offset="1" stop-color="#e8eef3"/></linearGradient></defs>
+<rect width="800" height="500" fill="url(#s)"/>
+<circle cx="660" cy="100" r="40" fill="#fff" opacity=".7"/>
+<path d="M0 360 Q200 300 400 350 T800 330 V500 H0Z" fill="#9fbf8f" opacity=".55"/>
+<polygon points="230,250 400,140 570,250" fill="#2c3540"/>
+<rect x="250" y="248" width="300" height="160" fill="#3b4a5a"/>
+<rect x="290" y="290" width="70" height="55" fill="#bcd3e3" stroke="#fff" stroke-width="5"/>
+<rect x="440" y="290" width="70" height="55" fill="#bcd3e3" stroke="#fff" stroke-width="5"/>
+<rect x="375" y="320" width="50" height="88" fill="#2c3540"/>
+<rect y="405" width="800" height="95" fill="#8fb27c"/>
+<rect x="0" y="405" width="800" height="6" fill="#7a9c68"/>
+<circle cx="140" cy="370" r="45" fill="#5f8a55"/><rect x="134" y="380" width="12" height="30" fill="#4a3a2c"/>
+<circle cx="690" cy="375" r="38" fill="#6b9660"/><rect x="684" y="385" width="12" height="25" fill="#4a3a2c"/>
+</svg>
