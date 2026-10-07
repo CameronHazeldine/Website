@@ -239,6 +239,9 @@ p { margin: 0 0 1em; }
   font-family: var(--font-head); font-size: 2.2rem; font-weight: 800;
 }
 .team-card span { color: var(--accent-dark); font-weight: 600; font-size: .92rem; display: block; margin-bottom: 10px; }
+.owner-photo { display: flex; justify-content: center; }
+.team-photo--lg { width: min(340px, 80vw); height: min(340px, 80vw); margin: 0; font-size: clamp(4rem, 10vw, 6rem); box-shadow: var(--shadow); }
+.owner-role { color: var(--accent-dark); font-weight: 700; margin-top: -0.4em; }
 
 /* CTA band */
 .cta {
