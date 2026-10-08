@@ -22,4 +22,4 @@ Open `index.html` in a browser, or run `python3 -m http.server` and go to http:/
 ## Hosting
 The site is set up for **https://www.waikatobuildingsolutions.com** (canonical links, link previews, `sitemap.xml`, `robots.txt` and a `404.html` page). It is plain static files, so it can be hosted on Netlify with no build settings: publish directory is the repository root.
 
-The domain is registered with Crazy Domains. When pointing it at the host, only add or change the records the host asks for (usually an `A` record for the bare domain and a `CNAME` for `www`). Leave the `MX` records alone, or email at the domain will stop working.
+The domain was bought through Google Workspace, so its DNS is managed in Squarespace Domains (which took over Google Domains). When pointing it at the host, only add or change the records the host asks for (usually an `A` record for the bare domain and a `CNAME` for `www`). Leave the Google Workspace records (`MX`, and `TXT` records for SPF, DKIM and verification) alone, or email at the domain will stop working.
