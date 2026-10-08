@@ -179,12 +179,25 @@
     var submitBtn = form.querySelector("button[type=submit]");
     submitBtn.disabled = true;
     submitBtn.textContent = "Sending…";
+    data.set("_subject", "Website enquiry: " + (data.get("service") || "General") + " — " + data.get("name"));
 
     fetch(endpoint, { method: "POST", body: data, headers: { Accept: "application/json" } })
       .then(function (res) {
-        if (!res.ok) throw new Error("Request failed");
-        form.reset();
-        showStatus("success", "Thanks! Your enquiry has been sent. We'll be in touch within one business day.");
+        return res.json().catch(function () { return {}; }).then(function (body) {
+          if (res.ok) {
+            form.reset();
+            showStatus("success", "Thanks! Your enquiry has been sent. We'll be in touch within one business day.");
+            return;
+          }
+          // Formspree returns { errors: [{ field, message }] } for rejected submissions
+          var errors = (body && body.errors) || [];
+          errors.forEach(function (err) {
+            var field = err.field && form.elements[err.field];
+            if (field && field.nodeType === 1) setError(field, true);
+          });
+          var detail = errors.map(function (err) { return err.message; }).filter(Boolean).join(" ");
+          showStatus("error", detail ? "Sorry, your enquiry couldn't be sent: " + detail : "Sorry, something went wrong. Please call us or email us directly.");
+        });
       })
       .catch(function () {
         showStatus("error", "Sorry, something went wrong. Please call us or email us directly.");

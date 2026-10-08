@@ -84,11 +84,12 @@
           <h2 style="font-size:1.8rem">Request a free quote</h2>
           <p style="color:var(--muted);margin-bottom:28px">Fields marked <span style="color:#c0392b">*</span> are required.</p>
           <!--
-            To receive submissions directly, create a free form at https://formspree.io (or similar)
-            and paste its endpoint into data-endpoint, e.g. data-endpoint="https://formspree.io/f/abcdwxyz".
-            While data-endpoint is empty, the form opens the visitor's email app addressed to data-mailto.
+            Enquiries are sent to Formspree (https://formspree.io/f/xdeagpew), which emails them to you.
+            js/main.js submits the form in the background and shows the result on the page; the
+            action/method attributes are a fallback for visitors with JavaScript turned off.
           -->
-          <form id="contact-form" novalidate data-endpoint="" data-mailto="admin@waikatobuildingsolutions.com">
+          <form id="contact-form" action="https://formspree.io/f/xdeagpew" method="POST" novalidate data-endpoint="https://formspree.io/f/xdeagpew" data-mailto="admin@waikatobuildingsolutions.com">
+            <input type="hidden" name="_subject" value="New website enquiry">
             <div class="form-row">
               <div class="field">
                 <label for="name">Full name <span class="req">*</span></label>
