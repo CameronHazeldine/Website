@@ -210,6 +210,10 @@ p { margin: 0 0 1em; }
 }
 .stars { color: var(--accent); letter-spacing: 2px; margin-bottom: 14px; font-size: 1.05rem; }
 .testimonial blockquote { margin: 0 0 24px; color: var(--ink); flex: 1; }
+.testimonial--wide { max-width: 860px; margin: 0 auto; padding: 48px; }
+.testimonial--wide blockquote { font-size: 1.12rem; line-height: 1.75; }
+.testimonial--wide blockquote p:last-child { margin-bottom: 0; font-weight: 600; color: var(--navy); }
+@media (max-width: 640px) { .testimonial--wide { padding: 30px 24px; } }
 .client { display: flex; align-items: center; gap: 14px; }
 .avatar {
   width: 48px; height: 48px; border-radius: 50%; background: var(--navy); color: #fff;
