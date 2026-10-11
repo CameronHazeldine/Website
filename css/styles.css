@@ -352,7 +352,9 @@ p { margin: 0 0 1em; }
   .grid-2, .grid-3, .grid-4, .form-row, .footer-grid { grid-template-columns: 1fr; }
   .form-card, .contact-info { padding: 26px; }
   .topbar .container { justify-content: center; }
-  .topbar .topbar-right { display: none; }
+  .topbar .container > div:first-child { display: none; }
+  .topbar .topbar-right span + span { display: none; }
+  .topbar .topbar-right a::before { content: "Call "; }
 }
 
 /* Project photos & gallery */

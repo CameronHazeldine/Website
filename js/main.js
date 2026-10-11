@@ -186,7 +186,7 @@
         return res.json().catch(function () { return {}; }).then(function (body) {
           if (res.ok) {
             form.reset();
-            showStatus("success", "Thanks! Your enquiry has been sent. We'll be in touch within one business day.");
+            showStatus("success", "Thanks! Your enquiry has been sent. We'll be in touch soon.");
             return;
           }
           // Formspree returns { errors: [{ field, message }] } for rejected submissions
