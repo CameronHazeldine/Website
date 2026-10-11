@@ -2,8 +2,8 @@
 :root {
   --navy: #14213d;
   --navy-2: #1f2f52;
-  --accent: #e0a526;
-  --accent-dark: #b9851a;
+  --accent: #f79420;
+  --accent-dark: #b35c00;
   --ink: #1d2433;
   --muted: #5b6475;
   --line: #e3e6ec;
@@ -88,12 +88,9 @@ p { margin: 0 0 1em; }
 }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; height: 78px; }
 .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.logo-mark {
-  width: 44px; height: 44px; border-radius: 8px;
-  background: var(--navy); display: grid; place-items: center;
-}
-.logo-text { font-family: var(--font-head); font-weight: 800; color: var(--navy); line-height: 1.1; font-size: 1.05rem; }
-.logo-text small { display: block; font-weight: 600; font-size: 0.72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-dark); }
+.logo-img { height: 54px; width: auto; }
+.logo-text { font-family: "Montserrat", var(--font-head); font-weight: 800; color: #111; line-height: 1.15; font-size: 1.08rem; letter-spacing: -.01em; }
+.logo-text small { display: block; font-weight: 400; font-size: 0.8rem; letter-spacing: .52em; color: #111; }
 
 .nav ul { list-style: none; display: flex; gap: 6px; margin: 0; padding: 0; align-items: center; }
 .nav a {
@@ -157,7 +154,7 @@ p { margin: 0 0 1em; }
 .card p { color: var(--muted); margin: 0; }
 .icon {
   width: 56px; height: 56px; border-radius: 10px;
-  background: rgba(224,165,38,.14); color: var(--accent-dark);
+  background: rgba(247,148,32,.14); color: var(--accent-dark);
   display: grid; place-items: center; margin-bottom: 20px;
 }
 .icon svg { width: 28px; height: 28px; }
@@ -207,7 +204,7 @@ p { margin: 0 0 1em; }
 }
 .testimonial::before {
   content: "\201C"; position: absolute; top: 6px; right: 26px;
-  font-family: Georgia, serif; font-size: 5rem; color: rgba(224,165,38,.3); line-height: 1;
+  font-family: Georgia, serif; font-size: 5rem; color: rgba(247,148,32,.3); line-height: 1;
 }
 .stars { color: var(--accent); letter-spacing: 2px; margin-bottom: 14px; font-size: 1.05rem; }
 .testimonial blockquote { margin: 0 0 24px; color: var(--ink); flex: 1; }
@@ -261,7 +258,7 @@ p { margin: 0 0 1em; }
 .contact-info { background: var(--navy); color: #c9cfdf; border-radius: var(--radius); padding: 40px; }
 .contact-info h3 { color: #fff; }
 .contact-item { display: flex; gap: 16px; margin-bottom: 26px; }
-.contact-item .icon { background: rgba(224,165,38,.18); color: var(--accent); margin: 0; flex-shrink: 0; width: 48px; height: 48px; }
+.contact-item .icon { background: rgba(247,148,32,.18); color: var(--accent); margin: 0; flex-shrink: 0; width: 48px; height: 48px; }
 .contact-item .icon svg { width: 22px; height: 22px; }
 .contact-item strong { display: block; color: #fff; font-family: var(--font-head); }
 .contact-item a { color: #c9cfdf; text-decoration: none; overflow-wrap: anywhere; }
@@ -283,7 +280,7 @@ p { margin: 0 0 1em; }
 }
 .field textarea { min-height: 150px; resize: vertical; }
 .field input:focus, .field select:focus, .field textarea:focus {
-  outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(224,165,38,.2);
+  outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(247,148,32,.2);
 }
 .field.has-error input, .field.has-error select, .field.has-error textarea { border-color: #c0392b; }
 .error-msg { color: #c0392b; font-size: .85rem; margin-top: 5px; display: none; }
@@ -305,7 +302,8 @@ p { margin: 0 0 1em; }
 .site-footer li { margin-bottom: 10px; }
 .site-footer a { text-decoration: none; color: #9aa4bd; }
 .site-footer a:hover { color: var(--accent); }
-.site-footer .logo-text { color: #fff; }
+.footer-logo { display: inline-block; margin-bottom: 18px; }
+.footer-logo img { width: 170px; height: auto; }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,.08); margin-top: 50px; padding: 22px 0;
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: .85rem;
